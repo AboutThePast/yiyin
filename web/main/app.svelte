@@ -154,16 +154,6 @@
 <Header />
 
 <div id="root">
-  {#await getGuideIconPath([$pathInfo.public, '/img/guide.svg']) then path}
-    <div class="guide">
-      <i style="background-image: url('file://{path}');"></i>
-      白嫖指南(●°u°●)​ 」
-    </div>
-    <div class="desc">
-      <i style="background-image: url('file://{path}');"></i>
-      萌新指北(｡･ω･｡)
-    </div>
-  {/await}
 
   <input type="file" id="path" accept="image/*" bind:this={fileSelectDom} on:change={onFileChange} multiple class="hide" />
 

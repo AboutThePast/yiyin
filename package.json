@@ -72,15 +72,25 @@
         "to": ".",
         "filter": [
           "**/*",
-          "!package.json"
+          "!package.json",
+          "!exiftool/t/images/EXE.dylib"
         ]
       },
       "package.json"
     ],
     "mac": {
       "icon": "./icon/icon.icns",
-      "category": "public.app-category.productivity"
-    },
+      "category": "public.app-category.productivity",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": "arm64"
+        }
+      ],
+      "mergeASARs": true,
+      "singleArchFiles": "Contents/Resources/app/node_modules/@ffmpeg-installer/darwin-arm64/ffmpeg"
+    }
+  ,
     "dmg": {
       "icon": "./icon/icon.icns",
       "iconSize": 100,
@@ -101,7 +111,10 @@
     "win": {
       "icon": "./icon/icon.ico",
       "target": [
-        "nsis"
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
       ]
     },
     "nsis": {

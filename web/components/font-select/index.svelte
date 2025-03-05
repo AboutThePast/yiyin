@@ -3,6 +3,7 @@
   import { FontDialog } from '@components';
   import { Message, Option, Select } from '@ggchivalrous/db-ui';
   import frederickathegreat from '@web/assets/font/FrederickatheGreat.ttf';
+  import maplemono from '@web/assets/font/MapleMonoNL-NF-CN-Light.ttf';
   import neoneon from '@web/assets/font/Neoneon.otf';
   import qiantuxiaotu from '@web/assets/font/千图小兔体.ttf';
   import chunfengkai from '@web/assets/font/春风楷.ttf';
@@ -22,6 +23,7 @@
     { name: '千图小兔', fileName: qiantuxiaotu, type: 'default' },
     { name: 'FrederickatheGreat', fileName: frederickathegreat, type: 'default' },
     { name: 'Neoneon', fileName: neoneon, type: 'default' },
+    { name: 'MapleMono', fileName: maplemono, type: 'default' },
   ];
   const defFontRecord = arrToObj(defFont, 'name');
   let fontList: {
